@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Keep anchor targets clear of the sticky navbar. */
+    scroll-padding-top: 5.5rem;
+  }
+  body {
+    @apply bg-white font-sans text-body antialiased;
+  }
+  ::selection {
+    @apply bg-green-brand-200 text-teal-brand-950;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Small uppercase label above headings. The short green bar echoes the
+     detached green strokes on the "E" and "F" of the logo wordmark. */
+  .eyebrow {
+    @apply flex items-center gap-2.5 font-display text-xs font-semibold uppercase tracking-eyebrow;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-1 w-6 shrink-0 bg-green-brand;
+  }
+
+  /* ---------- Form controls ---------- */
+  .form-label {
+    @apply mb-1.5 block text-sm font-semibold text-teal-brand-800;
+  }
+  .form-input {
+    @apply block w-full rounded-xl border border-teal-brand-100 bg-white px-4 py-3 text-[15px] text-teal-brand-950 shadow-sm transition
+      placeholder:text-slate-400
+      hover:border-teal-brand-200
+      focus:border-green-brand focus:outline-none focus:ring-4 focus:ring-green-brand/20;
+  }
+  .form-input[aria-invalid="true"] {
+    @apply border-red-500 focus:border-red-500 focus:ring-red-500/15;
+  }
+  .form-hint {
+    @apply mt-1.5 text-xs text-slate-500;
+  }
+  .form-error {
+    @apply mt-1.5 flex items-center gap-1.5 text-sm font-medium text-red-600;
+  }
+  .form-check {
+    @apply h-[18px] w-[18px] shrink-0 cursor-pointer border-teal-brand-200 accent-green-brand focus:outline-none focus-visible:ring-2 focus-visible:ring-green-brand focus-visible:ring-offset-2;
+  }
+}
+
+@layer utilities {
+  /* Precise survey-grid backgrounds. */
+  .bg-grid {
+    background-image:
+      linear-gradient(rgba(25, 70, 73, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(25, 70, 73, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-grid-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+  .bg-scanlines {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.045) 0px,
+      rgba(255, 255, 255, 0.045) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  }
+  /* Fade a grid out toward the edges. */
+  .mask-fade {
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+    mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%);
+  }
+}
