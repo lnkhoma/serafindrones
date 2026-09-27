@@ -304,7 +304,7 @@ export default function ContactForm({ initialType }: { initialType: RequestType 
 
         <fieldset className="sm:col-span-2" aria-describedby={errors.contactMethod ? errorId("contactMethod") : undefined}>
           <GroupLegend required>Preferred contact method</GroupLegend>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="flex flex-wrap gap-2">
             {CONTACT_METHODS.map((m) => (
               <ChoiceChip key={m} type="radio" value={m} label={CONTACT_METHOD_LABELS[m]} {...register("contactMethod")} />
             ))}
@@ -354,7 +354,7 @@ export default function ContactForm({ initialType }: { initialType: RequestType 
 
         <fieldset className="sm:col-span-2" aria-describedby={errors.crops ? errorId("crops") : undefined}>
           <GroupLegend required>Crop(s) to be considered</GroupLegend>
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="flex flex-wrap gap-2">
             {CROPS.map((crop) => (
               <ChoiceChip key={crop} type="checkbox" value={crop} label={crop} {...register("crops")} />
             ))}
@@ -387,7 +387,7 @@ export default function ContactForm({ initialType }: { initialType: RequestType 
 
         <fieldset className="sm:col-span-2" aria-describedby={errors.waterSource ? errorId("waterSource") : undefined}>
           <GroupLegend required>Water source</GroupLegend>
-          <div className="grid grid-cols-3 gap-2">
+          <div className="flex flex-wrap gap-2">
             {WATER_SOURCES.map((w) => (
               <ChoiceChip key={w} type="radio" value={w} label={WATER_SOURCE_LABELS[w]} {...register("waterSource")} />
             ))}

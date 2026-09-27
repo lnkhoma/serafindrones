@@ -30,7 +30,7 @@ export default function FormSection({
           {description && <span className="mt-1 block text-sm text-body">{description}</span>}
         </span>
       </legend>
-      <div className="clear-both grid gap-5 sm:grid-cols-2">{children}</div>
+      <div className="clear-both grid grid-cols-1 gap-5 sm:grid-cols-2">{children}</div>
     </fieldset>
   );
 }

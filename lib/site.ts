@@ -38,6 +38,7 @@ export const SITE = {
   /** Only networks listed here get an icon. Add more as accounts are created. */
   socials: {
     facebook: "https://www.facebook.com/serafindrones",
+    instagram: "https://www.instagram.com/serafin_drones",
   } as Partial<Record<SocialNetwork, string>>,
 } as const;
 

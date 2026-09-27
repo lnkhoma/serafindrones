@@ -46,7 +46,7 @@ lib/
   site.ts                 Phone, email, address, hours, socials, nav links
 public/
   logo.png                Brand logo (navbar + footer)
-  images/                 Real photography (see public/images/README.md)
+  images/                 Real photography (see docs/photos.md)
 ```
 
 ## Editing content
@@ -55,7 +55,7 @@ public/
 - **Section copy:** each section keeps its copy in constants at the top of its file
   (for example `SERVICES` in `components/home/Services.tsx` or `FLEET` in `components/home/Fleet.tsx`).
 - **Photos:** drop files into `public/images/` using the names listed in
-  [`public/images/README.md`](public/images/README.md), or change the `*_IMAGE`
+  [`docs/photos.md`](docs/photos.md), or change the `*_IMAGE`
   constant at the top of the component. Missing photos show a branded placeholder.
 - **Logo:** `public/logo.png` (teal/green, for light backgrounds), `public/logo-light.png`
   (white/green, for the dark footer) and `app/icon.png` / `app/apple-icon.png` (drone mark
@@ -140,7 +140,7 @@ already has inside the JSON file, so copy it as-is:
 
 ```dotenv
 GOOGLE_SHEETS_CLIENT_EMAIL=serafin-contact-form@serafin-website.iam.gserviceaccount.com
-GOOGLE_SHEETS_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASC...\n...\n-----END PRIVATE KEY-----\n"
+GOOGLE_SHEETS_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nPASTE_YOUR_KEY_HERE\n-----END PRIVATE KEY-----\n"
 GOOGLE_SHEETS_SPREADSHEET_ID=1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789
 ```
 

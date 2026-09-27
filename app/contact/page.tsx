@@ -44,10 +44,10 @@ export default function ContactPage({ searchParams }: { searchParams: { type?: s
         <FlightPath className="bottom-0 left-0 h-[40rem] w-full" />
 
         <div className="container-page relative -mt-20 grid gap-8 lg:grid-cols-12">
-          <div className="lg:col-span-8">
+          <div className="min-w-0 lg:col-span-8">
             <ContactForm initialType={initialType} />
           </div>
-          <div className="lg:col-span-4">
+          <div className="min-w-0 lg:col-span-4">
             <div className="lg:sticky lg:top-24">
               <Sidebar />
             </div>

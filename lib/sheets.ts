@@ -7,6 +7,8 @@
  *   GOOGLE_SHEETS_PRIVATE_KEY     service account private key (\n-escaped is fine)
  *   GOOGLE_SHEETS_SPREADSHEET_ID  ID from the spreadsheet URL
  */
+// Fails the build if this file is ever imported into client-side code.
+import "server-only";
 import { google, type sheets_v4 } from "googleapis";
 
 export class SheetsConfigError extends Error {

@@ -15,9 +15,14 @@
 # debug
 npm-debug.log*
 
-# env files — never commit secrets
-.env
-.env*.local
+# env files: never commit secrets (only the placeholder example is tracked)
+.env*
+!.env.local.example
+
+# Google service-account keys and other credential files
+*service-account*.json
+*credentials*.json
+*.key
 
 # typescript
 *.tsbuildinfo

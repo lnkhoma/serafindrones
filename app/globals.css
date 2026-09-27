@@ -11,6 +11,11 @@
   body {
     @apply bg-white font-sans text-body antialiased;
   }
+  /* Browsers give <fieldset> a min-content minimum width, which lets form
+     sections push past narrow phone screens. Let them shrink like a div. */
+  fieldset {
+    min-width: 0;
+  }
   ::selection {
     @apply bg-green-brand-200 text-teal-brand-950;
   }
