@@ -6,7 +6,7 @@ import { FlightPath, ScanLines } from "@/components/ui/Decor";
 import { CONTACT_HREF } from "@/lib/site";
 
 /* ---- Swap photo here ---- */
-const CTA_IMAGE = "/images/estate-walk.jpg";
+const CTA_IMAGE = "/images/salima-rice-fields.jpg";
 
 interface CTASectionProps {
   title?: string;

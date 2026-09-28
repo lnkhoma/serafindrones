@@ -13,6 +13,9 @@ const GALLERY = [
   { src: "/images/field-briefing.jpg", alt: "Pilot briefing the crew on the flight area", caption: "Flight briefing", span: "", position: "object-[center_30%]" },
   { src: "/images/estate-walk.jpg", alt: "Estate managers walking through a tea field", caption: "Walking the estate", span: "", position: "object-[center_45%]" },
   { src: "/images/drone-spraying.jpg", alt: "Agricultural drone flying over a tea field", caption: "In flight over the canopy", span: "lg:col-span-2", position: "object-[center_42%]" },
+  { src: "/images/salima-aerial.jpg", alt: "Aerial view of the Serafin team and spray drone beside rice paddies in Salima", caption: "Rice fields, Salima", span: "lg:col-span-2", position: "object-center" },
+  { src: "/images/salima-tank-fill.jpg", alt: "Pilot filling the spray tank next to a rice field in Salima", caption: "Filling the tank, Salima", span: "", position: "object-center" },
+  { src: "/images/salima-preflight.jpg", alt: "Crew running pre-flight checks on the drone in Salima", caption: "Pre-flight checks, Salima", span: "", position: "object-center" },
 ];
 
 export default function Gallery() {
@@ -23,7 +26,7 @@ export default function Gallery() {
           id="gallery-title"
           eyebrow="In the field"
           title="Out on Malawian farms"
-          description="Real flights, real fields and real farm teams: our drones at work on commercial estates."
+          description="Real flights, real fields and real farm teams: from the rice fields of Salima to commercial tea estates."
         />
 
         <ul className="mt-14 grid grid-flow-dense auto-rows-[200px] grid-cols-2 gap-3 sm:gap-4 lg:auto-rows-[220px] lg:grid-cols-4">

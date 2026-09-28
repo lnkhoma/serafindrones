@@ -5,10 +5,10 @@ import Photo from "@/components/ui/Photo";
 import { Viewfinder } from "@/components/ui/Decor";
 
 /* ---- Swap photos here: drop files into /public/images with these names. ---- */
-const TEAM_IMAGE = "/images/team-photo.jpg";
-const TEAM_IMAGE_ALT = "The Serafin Drones team with estate staff beside a spray drone on a tea estate";
-const FIELD_IMAGE = "/images/field-briefing.jpg";
-const FIELD_IMAGE_ALT = "Serafin pilot in a hi-vis vest planning a flight path in the field";
+const MAIN_IMAGE = "/images/salima-rice-walk.jpg";
+const MAIN_IMAGE_ALT = "Serafin team member walking through a rice field in Salima";
+const FIELD_IMAGE = "/images/salima-crew.jpg";
+const FIELD_IMAGE_ALT = "Serafin crew preparing a spray drone beside rice fields in Salima";
 
 /* "Why Choose Serafin Technology?" from the brochure. */
 const BENEFITS = [
@@ -27,12 +27,12 @@ export default function Benefits() {
         {/* Team imagery */}
         <Reveal className="relative pb-10 sm:pb-0">
           <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-lift">
-            <Photo src={TEAM_IMAGE} alt={TEAM_IMAGE_ALT} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
+            <Photo src={MAIN_IMAGE} alt={MAIN_IMAGE_ALT} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
             <Viewfinder />
           </div>
-          <div className="absolute -bottom-10 -right-2 hidden w-40 overflow-hidden rounded-2xl border-4 border-white shadow-lift sm:block lg:-right-6">
-            <div className="relative aspect-[3/4]">
-              <Photo src={FIELD_IMAGE} alt={FIELD_IMAGE_ALT} fill sizes="160px" className="object-cover" />
+          <div className="absolute -bottom-10 -right-2 hidden w-56 overflow-hidden rounded-2xl border-4 border-white shadow-lift sm:block lg:-right-6">
+            <div className="relative aspect-[4/3]">
+              <Photo src={FIELD_IMAGE} alt={FIELD_IMAGE_ALT} fill sizes="224px" className="object-cover" />
             </div>
           </div>
           <div className="absolute -left-2 top-6 rounded-2xl bg-teal-brand px-5 py-4 text-white shadow-lift lg:-left-6">
