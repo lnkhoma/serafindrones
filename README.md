@@ -31,9 +31,8 @@ app/
   page.tsx                Homepage (composes the sections below)
   contact/page.tsx        /contact: form + sidebar; reads ?type=
   api/contact/route.ts    POST: validate → append row to Google Sheets
-  api/newsletter/route.ts POST: footer newsletter → "Newsletter" tab
 components/
-  Navbar.tsx, Footer.tsx, CTASection.tsx, NewsletterForm.tsx
+  Navbar.tsx, Footer.tsx, CTASection.tsx
   home/                   Hero, StatsBar, Services + ServiceCard, HowItWorks +
                           ProcessStep, Benefits (About), Fleet, Gallery,
                           Testimonials + TestimonialCard
@@ -111,11 +110,9 @@ never shipped to the browser.
 
    The values are tab-separated, so pasting them into cell A1 fills A1:T1. The
    same list lives in `SHEET_HEADERS` in `lib/schema.ts`.
-3. *(Optional, for the footer newsletter)* Add a second tab named exactly
-   **`Newsletter`** with headers `Timestamp` and `Email`.
-4. Click **Share** and add the service account's `client_email` as an **Editor**.
+3. Click **Share** and add the service account's `client_email` as an **Editor**.
    Untick "Notify people".
-5. Copy the spreadsheet ID from the URL into `GOOGLE_SHEETS_SPREADSHEET_ID`:
+4. Copy the spreadsheet ID from the URL into `GOOGLE_SHEETS_SPREADSHEET_ID`:
 
    ```
    https://docs.google.com/spreadsheets/d/1AbCdEfGhIjKlMnOpQrStUvWxYz0123456789/edit#gid=0
@@ -174,7 +171,6 @@ variables in the host's environment settings.
 | `The caller does not have permission` (403) | Share the sheet with the service account email as **Editor**. |
 | `Requested entity was not found` (404) | Wrong `GOOGLE_SHEETS_SPREADSHEET_ID`. |
 | `Google Sheets API has not been used in project…` | Enable the Sheets API for the same Cloud project as the service account. |
-| `Unable to parse range: Newsletter!A1` | Create a tab named `Newsletter` (footer signup only). |
 
 ### API responses
 

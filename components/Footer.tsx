@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import Logo from "@/components/ui/Logo";
 import SocialIcons from "@/components/ui/SocialIcons";
-import NewsletterForm from "@/components/NewsletterForm";
 import { FlightPath } from "@/components/ui/Decor";
 import { CONTACT_HREF, NAV_LINKS, SITE } from "@/lib/site";
 
@@ -24,21 +23,11 @@ export default function Footer() {
       <div className="absolute inset-0 bg-grid-dark mask-fade opacity-60" aria-hidden />
 
       <div className="container-page relative grid gap-12 py-16 lg:grid-cols-12">
-        {/* Brand + newsletter */}
+        {/* Brand */}
         <div className="lg:col-span-4">
           {/* Light logo variant: teal parts rendered white for the dark footer. */}
           <Logo variant="light" imageClassName="h-12 w-auto sm:h-14" />
           <p className="mt-5 max-w-sm leading-relaxed">{SITE.tagline}</p>
-
-          <div className="mt-8">
-            <h2 className="font-display text-sm font-semibold uppercase tracking-eyebrow text-white">
-              Field notes newsletter
-            </h2>
-            <p className="mt-2 text-sm text-teal-brand-200">
-              Spraying and fertilizer windows, farm tips and company news. Monthly, no spam.
-            </p>
-            <NewsletterForm />
-          </div>
         </div>
 
         {/* Links */}

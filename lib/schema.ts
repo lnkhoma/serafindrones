@@ -230,12 +230,3 @@ export function toSheetRow(data: ContactFormValues, submittedAt = new Date()): (
 export function formatTimestamp(date: Date): string {
   return `${date.toLocaleString("sv-SE", { timeZone: "Africa/Blantyre" })} CAT`;
 }
-
-/* ------------------------------------------------------------------ */
-/* Newsletter                                                          */
-/* ------------------------------------------------------------------ */
-
-export const newsletterSchema = z.object({
-  email: z.string().trim().min(1, "Enter your email").email("Enter a valid email address"),
-});
-export type NewsletterValues = z.infer<typeof newsletterSchema>;

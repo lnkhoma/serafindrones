@@ -53,7 +53,7 @@ function getClient(clientEmail: string, privateKey: string) {
 /**
  * Appends one row to the spreadsheet.
  * @param range A1 range of the table to append to. "A1" targets the first tab;
- *              "Newsletter!A1" targets the tab named "Newsletter".
+ *              "TabName!A1" targets a named tab.
  */
 export async function appendRow(values: (string | number)[], range = "A1") {
   const { clientEmail, privateKey, spreadsheetId } = readConfig();
